@@ -5,7 +5,7 @@ public class MyLinkedList {
     private MyNode head = null;
 
     public void add(String data) {
-        if (head == null){
+        if (head == null) {
             head = new MyNode(data);
         } else {
             MyNode current = head;
@@ -24,9 +24,24 @@ public class MyLinkedList {
         MyNode current = head;
 
         for (int i = 0; i < index; i++) {
+            if ( current == null){
+                return null;
+            }
             current = current.getNext();
         }
 
         return current.getData();
+    }
+
+    public int size() {
+        int size = 0;
+        MyNode current = head;
+
+        while (current != null){
+            current = current.getNext();
+            size++;
+        }
+
+        return size;
     }
 }
