@@ -1,4 +1,4 @@
-package de.schulung.collections;
+package de.schulung.collections.lists;
 
 public class MyNode {
 

@@ -1,9 +1,6 @@
-package de.schulung.collections;
+package de.schulung.collections.lists;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class CollectionsDemoMain {
+public class MyLinkedListDemoMain {
     public static void main(String[] args) {
 //        List<String> names = new ArrayList<>();
 //        names.add("John");
