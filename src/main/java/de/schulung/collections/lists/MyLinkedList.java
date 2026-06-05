@@ -1,21 +1,21 @@
 package de.schulung.collections.lists;
 
 
-public class MyLinkedList {
-    private MyNode head = null;
+public class MyLinkedList<T> {
+    private MyNode<T> head = null;
     private int size = 0;
 
-    public void add(String data) {
+    public void add(T data) {
         if (head == null) {
-            head = new MyNode(data);
+            head = new MyNode<T>(data);
         } else {
-            MyNode current = head;
+            MyNode<T> current = head;
 
             while (current.getNext() != null) {
                 current = current.getNext();
             }
 
-            MyNode newNode = new MyNode(data);
+            MyNode<T> newNode = new MyNode<T>(data);
             current.setNext(newNode);
             newNode.setPrev(current);
         }
@@ -23,20 +23,20 @@ public class MyLinkedList {
         size++;
     }
 
-    public String remove(int index) {
+    public T remove(int index) {
         if ( index >= size || index < 0){
             return null;
         }
 
-        MyNode current = head;
+        MyNode<T> current = head;
         for (int i = 0; i < index; i++) {
             current = current.getNext();
         }
 
-        String data = current.getData();
+        T data = current.getData();
 
-        MyNode prev = current.getPrev();
-        MyNode next = current.getNext();
+        MyNode<T> prev = current.getPrev();
+        MyNode<T> next = current.getNext();
 
         if (prev != null) {
             prev.setNext(next);
@@ -53,8 +53,8 @@ public class MyLinkedList {
         return data;
     }
 
-    public String get(int index) {
-        MyNode current = head;
+    public T get(int index) {
+        MyNode<T> current = head;
 
         if ( index >= size || index < 0){
             return null;

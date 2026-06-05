@@ -1,34 +1,34 @@
 package de.schulung.collections.lists;
 
-public class MyNode {
+public class MyNode<T> {
 
-    private String data;
-    private MyNode next;
-    private MyNode prev;
+    private T data;
+    private MyNode<T> next;
+    private MyNode<T> prev;
 
-    public MyNode(String data){
+    public MyNode(T data){
         this.data = data;
     }
-    public String getData(){
+    public T getData(){
         return data;
     }
-    public void setData(String data){
+    public void setData(T data){
         this.data = data;
     }
 
-    public MyNode getNext() {
+    public MyNode<T> getNext() {
         return next;
     }
 
-    public void setNext(MyNode next) {
+    public void setNext(MyNode<T> next) {
         this.next = next;
     }
 
-    public MyNode getPrev() {
+    public MyNode<T> getPrev() {
         return prev;
     }
 
-    public void setPrev(MyNode prev) {
+    public void setPrev(MyNode<T> prev) {
         this.prev = prev;
     }
 }
